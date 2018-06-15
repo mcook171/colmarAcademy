@@ -79,22 +79,95 @@ nav ul a {
   background-size: cover;
   width: 60%;
   height: 700px;
-
-  border: 1px solid blue;
-}
-.banner img {
-  padding-top: 32px;
 }
 
 .banner .supporting {
   display: flex;
-  
-  border: 1px solid blue;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
 }
 
 .banner h1 {
   width: 100%;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 3.4rem;
   text-align: left;
+}
+
+.banner h2 {
+  margin: 2rem 0;
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+.supporting .btn {
+  width: 100%;
+  background-color: grey;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+}
+
+.supporting .btn span {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Main Section */
+
+main {
+  display: flex;
+
+  width: 100%;
+  height: 1000px;
+  border: 1px solid blue;
+}
+
+main .images-container {
+  width: 60%;
+  height: 700px;
+  margin: 2rem 1.5rem;
+  background-image: url("../images/information-main.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .supporting {
+  width: 40%;
+  height: 1000px;
+  border-left: 1px solid grey;
+}
+
+.story {
+  height: 250px;
+  display: flex;
+  margin: 1px 0;
+  border: 1px solid grey;
+}
+.story .image-container {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 35%;
+  height: auto;
+  margin: 1rem;
+}
+
+#orientation .image-container{
+  background-image: url("../images/information-orientation.jpg");
+}
+
+#campus .image-container{
+  background-image: url("../images/information-campus.jpg");
+}
+
+#lecture {
+  background-color: grey;
+}
+
+#lecture .image-container{
+  background-image: url("../images/information-guest-lecture.jpg");
 }
