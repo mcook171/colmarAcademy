@@ -2,9 +2,6 @@
 html {
   font-size: 16px;
 }
-body {
-  margin: 0;
-}
 
 /* Header */
 
@@ -13,7 +10,7 @@ header {
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-  height: 64px
+  height: 64px;
 }
 
 .logo {
@@ -71,17 +68,23 @@ nav ul a {
   background-color: lightgrey;
 }
 
-.banner .image-container {
-  margin: 1.5rem;
-  background-image: url("../images/banner.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.banner .left-container {
+
   width: 60%;
-  height: 700px;
+
+}
+.banner .image-container {
+  width: 100%;
+  height: 100%;
 }
 
-.banner .supporting {
+.banner img {
+  margin: 2rem 1.5rem;
+  width: 95%;
+  height: auto;
+}
+
+.banner .right-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +95,7 @@ nav ul a {
 .banner h1 {
   width: 100%;
   font-weight: bold;
-  font-size: 3.4rem;
+  font-size: 3.6rem;
   text-align: left;
 }
 
@@ -102,7 +105,8 @@ nav ul a {
   line-height: 1.4;
 }
 
-.supporting .btn {
+.banner .btn {
+  border-radius: 5px;
   width: 100%;
   background-color: grey;
   text-align: center;
@@ -110,43 +114,73 @@ nav ul a {
   margin-top: 1rem;
 }
 
-.supporting .btn span {
+.banner .btn span {
+
   font-size: 1.5rem;
   color: white;
 }
+
+.banner .btn a {
+  text-decoration: none;
+}
+
 
 /* Main Section */
 
 main {
   display: flex;
-
+  justify-content: flex-start;
   width: 100%;
-  height: 1000px;
-  border: 1px solid blue;
+  height: auto;
 }
 
-main .images-container {
+main .left-container {
+  display: flex;
+  flex-direction: column;
   width: 60%;
-  height: 700px;
+  height: 100%;
+}
+
+main .left-container .image-container {
   margin: 2rem 1.5rem;
-  background-image: url("../images/information-main.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+main .left-container .content {
+  margin-left: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+main .left-container h1 {
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+main .left-container p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+main img {
+  width: 100%;
 }
 
 main .supporting {
   width: 40%;
-  height: 1000px;
-  border-left: 1px solid grey;
+  height: auto;
+
+
 }
 
 .story {
   height: 250px;
   display: flex;
   margin: 1px 0;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
 }
+
 .story .image-container {
   background-position: center;
   background-size: cover;
@@ -154,6 +188,32 @@ main .supporting {
   width: 35%;
   height: auto;
   margin: 1rem;
+}
+
+.story .content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 55%;
+}
+
+.story .content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.story .content h3 {
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.story a {
+  text-decoration: none;
+  color: skyblue;
+  font-size: 1.2rem;
 }
 
 #orientation .image-container{
@@ -165,9 +225,62 @@ main .supporting {
 }
 
 #lecture {
-  background-color: grey;
+  background-color: lightgrey;
 }
 
 #lecture .image-container{
   background-image: url("../images/information-guest-lecture.jpg");
+}
+
+/* Degrees Section */
+
+.degrees {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  height: 1000px;
+  width: 100%;
+}
+
+.degrees h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  opacity: 0.7;
+}
+
+.degrees .first-column {
+  width: auto;
+  margin-right: 2rem;
+  border: 1px solid green;
+}
+
+.degrees .second-column {
+  width: auto;
+  margin-right: 2rem;
+}
+
+.degrees .third-column {
+  width: auto;
+  margin-right: 2rem;
+}
+
+.degrees .images-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin: 2rem 3.5rem;
+  border: 1px solid blue;
+}
+
+.degree h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.degree .content {
+  line-height: 1.4
 }
