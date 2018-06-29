@@ -79,7 +79,6 @@ nav ul a {
     justify-content: space-around;
     height: 32px;
     width: 75%;
-    border: 1px solid red;
   }
 
 
@@ -154,7 +153,6 @@ nav ul a {
 @media only screen and (max-width: 1200px) {
   .banner {
     flex-direction: column;
-
     height: auto;
   }
 
