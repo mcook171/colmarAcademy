@@ -1,6 +1,7 @@
 /* Universal */
 html {
   font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Header */
@@ -47,7 +48,8 @@ nav ul {
 }
 
 nav ul a {
-  color: black;
+  color: #0f0f96;
+  opacity: 0.4;
   font-size: 1.2rem;
   text-decoration: none;
 }
@@ -55,7 +57,32 @@ nav ul a {
 .seperator {
   width: 1rem;
   height: 4rem;
-  background-color: lightblue;
+  background-color: #0f0f96;
+  opacity: 0.7;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 470px) {
+  .title {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-around;
+    height: 32px;
+    width: 75%;
+    border: 1px solid red;
+  }
+
+
 }
 
 /* Banner Section*/
@@ -65,14 +92,13 @@ nav ul a {
   align-items: center;
   width: 100%;
   height: 764px;
-  background-color: lightgrey;
+  background-color: #aeaed6;
 }
 
 .banner .left-container {
-
   width: 60%;
-
 }
+
 .banner .image-container {
   width: 100%;
   height: 100%;
@@ -93,6 +119,7 @@ nav ul a {
 }
 
 .banner h1 {
+  color: #17153d;
   width: 100%;
   font-weight: bold;
   font-size: 3.6rem;
@@ -100,6 +127,7 @@ nav ul a {
 }
 
 .banner h2 {
+  color: #17153d;
   margin: 2rem 0;
   font-size: 2rem;
   line-height: 1.4;
@@ -108,20 +136,49 @@ nav ul a {
 .banner .btn {
   border-radius: 5px;
   width: 100%;
-  background-color: grey;
+  background-color: #e0ecff;
   text-align: center;
   padding: 0.5rem 0;
   margin-top: 1rem;
 }
 
 .banner .btn span {
-
   font-size: 1.5rem;
-  color: white;
+  color: #17153d;
 }
 
 .banner .btn a {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .banner {
+    flex-direction: column;
+
+    height: auto;
+  }
+
+  .banner .left-container {
+    width: 100%;
+  }
+
+  .banner img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .banner .right-container {
+    width: 100%;
+  }
+
+  .banner .right-container .content {
+    margin-left: 1rem;
+  }
+
+  .banner .btn {
+    width: 200px;
+    margin-bottom: 2rem;
+  }
 }
 
 
@@ -153,12 +210,14 @@ main .left-container .content {
 }
 
 main .left-container h1 {
+  color: #17153d;
   margin-bottom: 1.5rem;
   font-size: 3rem;
   font-weight: bold;
 }
 
 main .left-container p {
+  color: #17153d;
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -170,21 +229,19 @@ main img {
 main .supporting {
   width: 40%;
   height: auto;
-
-
 }
 
+main .supporting-mobile {
+  display: none;
+}
 .story {
   height: 250px;
   display: flex;
   margin: 1px 0;
-  border: 1px solid lightgrey;
+  border: 1px solid #aeaed6;
 }
 
 .story .image-container {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 35%;
   height: auto;
   margin: 1rem;
@@ -200,11 +257,13 @@ main .supporting {
 }
 
 .story .content h2 {
+  color: #17153d;
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
 .story .content h3 {
+  color: #17153d;
   font-weight: 300;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -212,25 +271,49 @@ main .supporting {
 
 .story a {
   text-decoration: none;
-  color: skyblue;
+  color: #72959e;
   font-size: 1.2rem;
 }
 
-#orientation .image-container{
-  background-image: url("../images/information-orientation.jpg");
+.lecture {
+  background-color: #aeaed6;
 }
 
-#campus .image-container{
-  background-image: url("../images/information-campus.jpg");
+
+@media only screen and (max-width: 670px) {
+  main .left-container {
+    display: none;
+  }
+
+  main .supporting {
+    display: none;
+  }
+
+  main .supporting-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .supporting-mobile .story {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .story .image-container {
+    margin: 1rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .story .content {
+    margin: 3rem 1rem;
+
+  }
+
+
 }
 
-#lecture {
-  background-color: lightgrey;
-}
-
-#lecture .image-container{
-  background-image: url("../images/information-guest-lecture.jpg");
-}
 
 /* Degrees Section */
 
@@ -239,7 +322,7 @@ main .supporting {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightgrey;
+  background-color: #aeaed6;
   height: auto;
   width: 100%;
 }
@@ -250,6 +333,7 @@ main .supporting {
   margin: 1rem;
 }
 .degrees h1 {
+  color: #17153d;
   font-size: 3.5rem;
   margin: 2rem;
   font-weight: 800;
@@ -277,12 +361,14 @@ main .supporting {
 }
 
 .degree h2 {
+  color: #17153d;
   font-size: 1.8rem;
   font-weight: 600;
   opacity: 0.7;
 }
 
 .degree h3 {
+  color: #17153d;
   font-weight: 500;
   font-size: 1.4rem;
   opacity: 0.5;
@@ -299,6 +385,35 @@ main .supporting {
   padding: 1rem;
 }
 
+.degrees-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 740px) {
+  .degrees .images-container {
+    display: none;
+  }
+
+  .degrees {
+      background-color: white;
+      border-bottom: 1px solid #aeaed6;
+      padding-bottom: 1.5rem;
+  }
+
+  .degrees-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .degrees-mobile h2 {
+    font-size: 1.8rem;
+    color: #17153d;
+    font-weight: bold;
+    background-color: #aeaed6;
+    padding: 1rem;
+    margin: 0.25rem;
+  }
+}
 /* Thesis section */
 
 .thesis {
@@ -311,6 +426,7 @@ main .supporting {
 }
 
 .thesis h1 {
+  color: #17153d;
   font-size: 3.5rem;
   margin: 2rem;
   font-weight: 800;
@@ -351,11 +467,12 @@ main .supporting {
 }
 
 #fisma {
-  background-color: lightgrey;
+  background-color: #aeaed6;
   width: 100%;
 }
 
 .thesis h2 {
+  color: #17153d;
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -363,10 +480,25 @@ main .supporting {
 }
 
 .thesis h3 {
+  color: #17153d;
   font-weight: 500;
   font-size: 1.4rem;
   opacity: 0.5;
   padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .thesis .right-container {
+    display: none;
+  }
+  .thesis .left-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .thesis .left-container .content {
+    display: none;
+  }
 }
 
 /* Footer */
@@ -374,15 +506,15 @@ main .supporting {
 footer {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid lightgrey;
-  height: 100px;
+  border-top: 1px solid #aeaed6;
+  height: auto;
 }
 
 footer h3 {
+  color: #17153d;
   font-weight: 500;
-
   opacity: 0.5;
-  margin: 1rem 1.5rem;
+  margin: 1rem 0 2rem 1.5rem;
 }
 
 footer nav {
@@ -391,8 +523,14 @@ footer nav {
 
 footer nav a {
   margin-right: 1rem;
-  color: inherit;
+  color: #17153d;
   opacity: 0.5;
   text-decoration: none;
   font-size: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+  footer nav {
+    display: none;
+  }
 }
